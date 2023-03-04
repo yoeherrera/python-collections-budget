@@ -9,10 +9,10 @@ expenses.read_expenses("data/spending_data.csv")
 spending_categories = []
 
 for expense in expenses.list:
-    spending_counter = collections.Counter(spending_categories)
-    print(spending_counter)
     spending_categories.append(expense.category)
+    print(spending_counter)
 
+spending_counter = collections.Counter(spending_categories)
 top5 = spending_counter.most_common(5)
 
 categories, count = zip(*top5)
